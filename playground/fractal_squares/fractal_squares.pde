@@ -3,9 +3,9 @@ void setup() {
   background(125);
   noStroke();
   ArrayList<Rectangle> rectangles = new ArrayList<Rectangle>();
-  color col = color(0, 0, 0);
+  color col = color(51, 54, 49);
   Rectangle rec_init = new Rectangle(0, 0, width, col);
-  rectangles = produceRecs(rec_init, 0, 7);
+  rectangles = produceRecs(rec_init, 0, 8);
   for (Rectangle rec : rectangles){
     fill(rec.col);
     rect(rec.left, rec.top, rec.size, rec.size);
@@ -31,11 +31,14 @@ IterConf[] iterationConfigs = new IterConf[] {
   new IterConf(11.0/24, 10.0/12, 1.0/12)
 };
 
+//Japanese colors sampled from: https://www.colordic.org/w
 color[] pallete = new color[]{
-  color(255, 0, 0),
-  color(0,0,255),
-  color(0,255,0),
-  color(0,255,255)};
+  color(211,56,28), //hiiro
+  color(0,149,217), //ao
+  color(195,216,37), //wakakusa
+  color(255,217,0), //tampopo  
+  color(56, 180, 139), //hisui
+};
 
 class Rectangle{
   float top, left, size;
